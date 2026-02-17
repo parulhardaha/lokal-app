@@ -1,6 +1,6 @@
 # Lokal App (Passwordless OTP demo)
 
-This is a minimal Expo + TypeScript demo implementing a passwordless OTP flow using an in-memory OTP manager and AsyncStorage for session persistence.
+Passwordless OTP flow using an in-memory OTP manager and AsyncStorage for session persistence
 
 Files created under `src/`:
 
@@ -23,22 +23,15 @@ cd /Users/parulhardaha/Desktop/lokal-app
 npm install
 ```
 
-(If you use Yarn: `yarn`)
-
-2. Start the Expo dev server:
+2. Start the Expo web server:
 
 ```bash
-npm run start
+npm run web
 ```
 
-3. Run on device or simulator using Expo Dev Tools.
+3. See the browser's console log for the generated OTP and error logs
 
 Notes
 
 - OTPs are stored in-memory. App reload clears them (but sessions are persisted in AsyncStorage).
-- The implementation is intentionally minimal and focused on the requested logic.
-
-Next steps
-
-- Add form validation, UI styling and accessibility improvements.
-- Add small tests around services.
+- The implementation is very minimal and focused on the requested logic
