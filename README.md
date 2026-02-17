@@ -19,7 +19,8 @@ How to run
 1. Install dependencies:
 
 ```bash
-cd /Users/parulhardaha/Desktop/lokal-app
+git clone https://github.com/parulhardaha/lokal-app.git
+cd lokal-app
 npm install
 ```
 
