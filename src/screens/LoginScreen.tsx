@@ -18,8 +18,9 @@ export default function LoginScreen({ navigation }: any) {
     const code = generateOtp(email);
     console.log('Generated OTP:', code);
 
-    // In a real app you'd send code via email/SMS. For dev we log it.
-    navigation.navigate('Otp', { email });
+    // In a real app you'd send code via email/SMS. For dev/demo we pass the code
+    // to the OTP screen so it can be displayed in the UI.
+    navigation.navigate('Otp', { email, debugCode: code });
   };
 
   return (

@@ -6,7 +6,11 @@ import { login } from '../services/auth';
 export default function OtpScreen({ route, navigation }: any) {
   const { email } = route.params;
   const [input, setInput] = useState('');
-  const [debugCode, setDebugCode] = useState<string | null>(null);
+  // Initialize debugCode from navigation params so the OTP generated on the
+  // Login screen is visible immediately when arriving at this screen.
+  const [debugCode, setDebugCode] = useState<string | null>(
+    (route.params && route.params.debugCode) ?? null
+  );
 
   const handleVerify = async () => {
     const result = validateOtp(email, input);
@@ -26,10 +30,10 @@ export default function OtpScreen({ route, navigation }: any) {
   };
 
   const handleResend = () => {
-    const newCode = generateOtp(email);
-    console.log('Resent OTP:', newCode);
-    // keep a visible debug copy in-app so developers can see the OTP
-    if (__DEV__) setDebugCode(newCode);
+  const newCode = generateOtp(email);
+  console.log('Resent OTP:', newCode);
+  // keep a visible copy in-app so the generated OTP is visible in the UI
+  setDebugCode(newCode);
 
     if (Platform.OS === 'web' && typeof globalThis !== 'undefined') {
       (globalThis as any).alert('New OTP generated');
@@ -52,8 +56,8 @@ export default function OtpScreen({ route, navigation }: any) {
       <Button title="Verify OTP" onPress={handleVerify} />
       <View style={{ height: 12 }} />
       <Button title="Resend OTP" onPress={handleResend} />
-      {__DEV__ && debugCode ? (
-        <Text style={styles.debug}>Debug OTP: {debugCode}</Text>
+      {debugCode ? (
+        <Text style={styles.debug}>Generated OTP is (only for demo purposes): {debugCode}</Text>
       ) : null}
     </View>
   );
