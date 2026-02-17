@@ -72,3 +72,10 @@ Core design and behavior
 - What GPT generated / helped implement:
   - A concrete file structure, types, service implementations (otpManager, storageService, auth), the session timer hook, and basic screen components.
   - Guidance on platform differences (web vs native logs, Watchman).
+  
+5) Below are some screenshots showcasing the core functionality.
+<img width="1470" height="870" alt="Screenshot 2026-02-18 at 1 49 11 AM" src="https://github.com/user-attachments/assets/fed5009c-3d9b-4dc2-9833-750d88309383" />
+<img width="1470" height="789" alt="Screenshot 2026-02-18 at 1 49 31 AM" src="https://github.com/user-attachments/assets/83436f1c-b80b-45ef-b5b9-72c875bb6849" />
+<img width="1461" height="590" alt="Screenshot 2026-02-18 at 1 50 06 AM" src="https://github.com/user-attachments/assets/f8c1bdf9-d49b-4ac0-a558-e87468f7bd04" />
+<img width="1469" height="519" alt="Screenshot 2026-02-18 at 1 50 21 AM" src="https://github.com/user-attachments/assets/d9d5bb3e-0395-4d66-a04b-308af047e818" />
+
