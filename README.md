@@ -27,8 +27,13 @@ npm run web
 # or
 expo start --web
 ```
+ Open the app in the browser (Expo will usually open http://localhost:19006). Open the browser DevTools Console (Cmd+Option+I on macOS) to see console.log output.
 
-3. Open the app in the browser (Expo will usually open http://localhost:19006). Open the browser DevTools Console (Cmd+Option+I on macOS) to see console.log output.
+4. Run the app on Android:
+
+```bash
+npx expo run:android
+```
 
 Core design and behavior
 

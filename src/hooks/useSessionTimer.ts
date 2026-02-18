@@ -12,9 +12,8 @@ export const useSessionTimer = (startTime?: number | null) => {
 
     const update = () => setDuration(Date.now() - startTime);
 
-    update();
-    const interval = setInterval(update, 1000);
-
+    update(); //this ensures the timer shows the correct duration immediately on load,without waiting for 1 secfor the first interval tick to update it
+    const interval = setInterval(update, 1000); //will run every second to update the duration
     return () => clearInterval(interval);
   }, [startTime]);
 

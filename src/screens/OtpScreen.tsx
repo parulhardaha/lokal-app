@@ -57,7 +57,7 @@ export default function OtpScreen({ route, navigation }: any) {
       <View style={{ height: 12 }} />
       <Button title="Resend OTP" onPress={handleResend} />
       {debugCode ? (
-        <Text style={styles.debug}>Generated OTP is (only for demo purposes): {debugCode}</Text>
+        <Text style={styles.debug}>Generated OTP is (only for demo purpose): {debugCode}</Text>
       ) : null}
     </View>
   );
